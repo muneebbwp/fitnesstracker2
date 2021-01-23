@@ -1,14 +1,10 @@
 let mongoose = require("mongoose");
 let db = require("../models");
 
-// provided by bcbrian
-mongoose
-  .connect(
-    process.env.MONGODB_URI || "mongodb://localhost/workout",
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log("MongoDB successfully connected"))
-  .catch(err => console.log(err));
+mongoose.connect("mongodb://localhost/workout", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
 
 let workoutSeed = [
   {
@@ -88,7 +84,7 @@ let workoutSeed = [
     ]
   },
   {
-    day: new Date().setDate(new Date().getDate()-4),
+    day: new Date(new Date().setDate(new Date().getDate() - 4)),
     exercises: [
       {
         type: "resistance",
@@ -101,7 +97,7 @@ let workoutSeed = [
     ]
   },
   {
-    day: new Date().setDate(new Date().getDate()-3),
+    day: new Date(new Date().setDate(new Date().getDate() - 3)),
     exercises: [
       {
         type: "resistance",
@@ -114,7 +110,7 @@ let workoutSeed = [
     ]
   },
   {
-    day: new Date().setDate(new Date().getDate()-2),
+    day: new Date(new Date().setDate(new Date().getDate() - 2)),
     exercises: [
       {
         type: "resistance",
@@ -123,17 +119,6 @@ let workoutSeed = [
         weight: 300,
         reps: 10,
         sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-1),
-    exercises: [
-      {
-        type: "resistance",
-        name: "Bench",
-        duration: 30,
-        distance: 2
       }
     ]
   }
