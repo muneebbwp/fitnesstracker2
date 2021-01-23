@@ -1,7 +1,7 @@
 {
   "name": "mongoose_skeleton",
   "version": "1.0.0",
-  "description": "",
+  "description": "For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -16,5 +16,14 @@
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.13",
     "morgan": "^1.9.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muneebbwp/fitnesstracker2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/muneebbwp/fitnesstracker2/issues"
+  },
+  "homepage": "https://github.com/muneebbwp/fitnesstracker2#readme"
 }
