@@ -1,23 +1,19 @@
 {
   "name": "mongoose_skeleton",
   "version": "1.0.0",
-  "engines": {
-    "node": "14.x"
-  },
   "description": "For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "node server.js",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
     "seed": "node seeders/seed.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "mongodb": "^3.6.3",
-    "mongoose": "^5.11.13",
+    "mongoose": "^5.3.16",
     "morgan": "^1.9.1"
   },
   "devDependencies": {},
