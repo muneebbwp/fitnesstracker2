@@ -27,7 +27,7 @@ mongoose.connect(
   }
 );
 
-const db = require("./models");
+
 
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
